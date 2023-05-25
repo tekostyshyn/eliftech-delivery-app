@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding: 20px;
   width: calc((100% - 130px) / 2);
-  border: 2px solid black;
+  border: 2px solid #0047ab;
   border-radius: 4px;
 `;
 
