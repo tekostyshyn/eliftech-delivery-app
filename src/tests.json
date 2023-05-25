@@ -1,0 +1,95 @@
+[
+  {
+    "name": "McDonald's",
+    "meals": [
+      {
+        "name": "Cheeseburger",
+        "price": "120",
+        "id": "11"
+      },
+      {
+        "name": "Big Tasty Burger",
+        "price": "150",
+        "id": "12"
+      },
+      {
+        "name": "Hamburger",
+        "price": "100",
+        "id": "13"
+      },
+      {
+        "name": "Chicken Roll",
+        "price": "135",
+        "id": "14"
+      },
+      {
+        "name": "French Fries",
+        "price": "90",
+        "id": "15"
+      },
+      {
+        "name": "Chicken McNuggets",
+        "price": "115",
+        "id": "16"
+      }
+    ],
+    "id": "1"
+  },
+  {
+    "name": "KFC",
+    "meals": [
+      {
+        "name": "Colonel Burger",
+        "price": "105",
+        "id": "21"
+      },
+      {
+        "name": "Wingers",
+        "price": "125",
+        "id": "22"
+      },
+      {
+        "name": "Wings Bucket",
+        "price": "170",
+        "id": "23"
+      },
+      {
+        "name": "Chicken Strips",
+        "price": "130",
+        "id": "24"
+      }
+    ],
+    "id": "2"
+  },
+  {
+    "name": "Pizza",
+    "meals": [
+        {
+            "name": "Pepperoni",
+            "price": "205",
+            "id": "31"
+          },
+          {
+            "name": "4 Cheese",
+            "price": "230",
+            "id": "32"
+          },
+          {
+            "name": "Capriceza",
+            "price": "210",
+            "id": "33"
+          },
+          {
+            "name": "Hawaii",
+            "price": "225",
+            "id": "34"
+          },
+          {
+            "name": "Margherita",
+            "price": "190",
+            "id": "35"
+          }
+    ],
+    "id": "3"
+  }
+]
