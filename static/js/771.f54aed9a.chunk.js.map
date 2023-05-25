@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/771.f54aed9a.chunk.js","mappings":"0JAOE,UAPW,WACT,OACE,mBAGH,C","sources":["pages/Shop.jsx"],"sourcesContent":["const Shop = () => {\n    return (\n      <main>\n      </main>\n    );\n  };\n  \n  export default Shop;\n  "],"names":[],"sourceRoot":""}
