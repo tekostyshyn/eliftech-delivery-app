@@ -1,15 +1,25 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 15px 10px;
+min-height: 400px;
+  padding: 20px 15px 60px 15px;
   width: calc((100% - 30px) / 4);
-  background-color: lightgray;
+  border: 2px solid black;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
 `;
 
 export const Heading = styled.div`
   font-size: 24px;
   font-weight: 600;
-  margin: 0;
+  margin-bottom: 30px;
+`;
+
+export const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 `;
