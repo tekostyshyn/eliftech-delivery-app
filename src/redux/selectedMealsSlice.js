@@ -5,7 +5,12 @@ const selectedMealsSlice = createSlice({
   initialState: [],
   reducers: {
     addMeal(state, action) {
-        state.push(action.payload)
+      const index = state.findIndex(meal => meal.name === action.payload.name);
+      if (index >= 0) {
+        state[index] = action.payload;
+        return;
+      }
+      state.push(action.payload);
     },
   },
 });
