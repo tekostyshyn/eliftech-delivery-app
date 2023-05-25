@@ -40,3 +40,9 @@ export const Text = styled.p`
   font-size: 18px;
   font-weight: 600;
 `;
+
+export const AmountWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`;

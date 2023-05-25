@@ -13,3 +13,7 @@ export const selectMeals = value => state => {
     return allMeals;
   }, []);
 };
+
+export const selectChosenMeals = state => {
+  return state.selectedMeals;
+};

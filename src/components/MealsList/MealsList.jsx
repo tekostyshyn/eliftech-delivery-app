@@ -5,7 +5,6 @@ import MealItem from 'components/MealItem';
 
 const MealsList = ({ chosenShop }) => {
   const mealsList = useSelector(selectMeals(chosenShop));
-  console.log(mealsList);
   return (
     <Container>
       {mealsList.map(meal => (
