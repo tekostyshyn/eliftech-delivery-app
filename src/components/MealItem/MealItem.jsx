@@ -28,6 +28,13 @@ const MealItem = ({ name, price, url }) => {
     setAmount(prev => prev - 1);
   };
 
+  const setButtonClasses = () => {
+    if (amount === 0) {
+      return 'disabled';
+    }
+    return '';
+  };
+
   return (
     <Container>
       <Picture src={url} alt={name} />
@@ -36,7 +43,7 @@ const MealItem = ({ name, price, url }) => {
         <Text>{price} UAH</Text>
       </Wrapper>
       <Wrapper>
-        <Button onClick={() => handleClick(name, price, amount)}>Order</Button>
+        <Button className={setButtonClasses()} onClick={() => handleClick(name, price, amount)}>Order</Button>
         <AmountWrapper>
           <button onClick={handleDecrement}>-</button>
           <p>Amount: {amount}</p>
