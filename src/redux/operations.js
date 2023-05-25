@@ -15,17 +15,17 @@ export const fetchShops = createAsyncThunk(
     }
   );
   
-//   export const addTask = createAsyncThunk(
-//     "tasks/addTask",
-//     async (text, thunkAPI) => {
-//       try {
-//         const response = await axios.post("/tasks", { text });
-//         return response.data;
-//       } catch (e) {
-//         return thunkAPI.rejectWithValue(e.message);
-//       }
-//     }
-//   );
+  export const submitOrder = createAsyncThunk(
+    "orders/submitOrder",
+    async (order, thunkAPI) => {
+      try {
+        const response = await axios.post("/orders", order);
+        return response.data;
+      } catch (e) {
+        return thunkAPI.rejectWithValue(e.message);
+      }
+    }
+  );
   
 //   export const deleteTask = createAsyncThunk(
 //     "tasks/deleteTask",

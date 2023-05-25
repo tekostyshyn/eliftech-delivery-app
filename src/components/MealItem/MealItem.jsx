@@ -10,13 +10,13 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addMeal } from 'redux/selectedMealsSlice';
 
-const MealItem = ({ name, price, url }) => {
+const MealItem = ({ name, price, id, url}) => {
   const [amount, setAmount] = useState(0);
   const dispatch = useDispatch();
 
-  const handleClick = (name, price, quantity) => {
-    if (quantity === 0) return;
-    dispatch(addMeal({ name, quantity, price }));
+  const handleClick = (name) => {
+    if (amount === 0) return;
+    dispatch(addMeal({ name, amount, price, id, url }));
   };
 
   const handleIncrement = () => {
@@ -43,7 +43,7 @@ const MealItem = ({ name, price, url }) => {
         <Text>{price} UAH</Text>
       </Wrapper>
       <Wrapper>
-        <Button className={setButtonClasses()} onClick={() => handleClick(name, price, amount)}>Order</Button>
+        <Button className={setButtonClasses()} onClick={() => handleClick(name)}>Add to Cart</Button>
         <AmountWrapper>
           <button onClick={handleDecrement}>-</button>
           <p>Amount: {amount}</p>

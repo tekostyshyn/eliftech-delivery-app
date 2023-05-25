@@ -15,5 +15,6 @@ export const selectMeals = value => state => {
 };
 
 export const selectChosenMeals = state => {
-  return state.selectedMeals;
+  return state.selectedMeals.meals;
 };
+

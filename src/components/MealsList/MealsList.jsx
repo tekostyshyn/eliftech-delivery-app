@@ -8,7 +8,7 @@ const MealsList = ({ chosenShop }) => {
   return (
     <Container>
       {mealsList.map(meal => (
-        <MealItem key={meal.id} name={meal.name} price={meal.price} url={meal.url} />
+        <MealItem key={meal.id} name={meal.name} price={meal.price} url={meal.url} id={meal.id} />
       ))}
     </Container>
   );
