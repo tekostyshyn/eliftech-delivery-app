@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/eliftech-delivery-app/static/css/main.74def526.css",
-    "main.js": "/eliftech-delivery-app/static/js/main.83d332b9.js",
-    "static/js/908.1f238874.chunk.js": "/eliftech-delivery-app/static/js/908.1f238874.chunk.js",
+    "main.js": "/eliftech-delivery-app/static/js/main.8f76354d.js",
+    "static/js/908.870c86c3.chunk.js": "/eliftech-delivery-app/static/js/908.870c86c3.chunk.js",
     "static/js/137.843ba8e5.chunk.js": "/eliftech-delivery-app/static/js/137.843ba8e5.chunk.js",
     "index.html": "/eliftech-delivery-app/index.html",
     "main.74def526.css.map": "/eliftech-delivery-app/static/css/main.74def526.css.map",
-    "main.83d332b9.js.map": "/eliftech-delivery-app/static/js/main.83d332b9.js.map",
-    "908.1f238874.chunk.js.map": "/eliftech-delivery-app/static/js/908.1f238874.chunk.js.map",
+    "main.8f76354d.js.map": "/eliftech-delivery-app/static/js/main.8f76354d.js.map",
+    "908.870c86c3.chunk.js.map": "/eliftech-delivery-app/static/js/908.870c86c3.chunk.js.map",
     "137.843ba8e5.chunk.js.map": "/eliftech-delivery-app/static/js/137.843ba8e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74def526.css",
-    "static/js/main.83d332b9.js"
+    "static/js/main.8f76354d.js"
   ]
 }
