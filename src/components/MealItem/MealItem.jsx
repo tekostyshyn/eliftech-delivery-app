@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addMeal } from 'redux/selectedMealsSlice';
 import {
   Container,
   Picture,
@@ -6,9 +9,6 @@ import {
   Text,
   AmountWrapper,
 } from './MealItem.styled';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addMeal } from 'redux/selectedMealsSlice';
 
 const MealItem = ({ name, price, id, url}) => {
   const [amount, setAmount] = useState(0);

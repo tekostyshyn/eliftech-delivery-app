@@ -12,7 +12,7 @@ const handleRejected = (state, action) => {
 
 const selectedMealsSlice = createSlice({
   name: 'selectedMeals',
-  initialState: { meals: [], isLoading: false, error: null },
+  initialState: { meals: [], isLoading: false, error: null, isOrdered: false },
   reducers: {
     addMeal(state, action) {
       const index = state.meals.findIndex(
@@ -23,6 +23,7 @@ const selectedMealsSlice = createSlice({
         return;
       }
       state.meals.push(action.payload);
+      state.isOrdered = false;
     },
     increaseAmount(state, action) {
       const index = state.meals.findIndex(meal => meal.name === action.payload);
@@ -46,14 +47,15 @@ const selectedMealsSlice = createSlice({
       state.meals.splice(index, 1);
     },
   },
-  extraReducers: {
-    [submitOrder.pending]: handlePending,
-    [submitOrder.fulfilled](state, action) {
+  extraReducers: builder => {
+    builder.addCase(submitOrder.pending, handlePending);
+    builder.addCase(submitOrder.fulfilled, (state) => {
       state.isLoading = false;
       state.error = null;
       state.meals = [];
-    },
-    [submitOrder.rejected]: handleRejected,
+      state.isOrdered = true;
+    });
+    builder.addCase(submitOrder.rejected, handleRejected);
   },
 });
 

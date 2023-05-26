@@ -13,5 +13,10 @@ export const ContainerItem = styled.div`
   padding: 20px 20px 60px 20px;
   border: 2px solid black;
   border-radius: 4px;
-  overflow-y: scroll;
+  overflow-y: auto;
+`;
+
+export const Message = styled.p`
+  font-size: 24px;
+  line-height: 1.36;
 `;

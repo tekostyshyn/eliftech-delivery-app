@@ -13,46 +13,27 @@ const handleRejected = (state, action) => {
 const shopsSlice = createSlice({
   name: 'shops',
   initialState: {
+    chosenShop: 'McDonalds',
     items: [],
     isLoading: false,
     error: null,
   },
-  extraReducers: {
-    [fetchShops.pending]: handlePending,
-    [fetchShops.fulfilled](state, action) {
+  reducers: {
+    setChosenShop(state, action) {
+      state.chosenShop = action.payload;
+    },
+  },
+  extraReducers: builder => {
+    builder.addCase(fetchShops.pending, handlePending);
+    builder.addCase(fetchShops.fulfilled, (state, action) => {
       state.isLoading = false;
       state.error = null;
-      state.items = [...action.payload]
-    },
-    [fetchShops.rejected]: handleRejected,
-    // [addTask.pending]: handlePending,
-    // [addTask.fulfilled](state, action) {
-    //   state.isLoading = false;
-    //   state.error = null;
-    //   state.items.push(action.payload);
-    // },
-    // [addTask.rejected]: handleRejected,
-    // [deleteTask.pending]: handlePending,
-    // [deleteTask.fulfilled](state, action) {
-    //   state.isLoading = false;
-    //   state.error = null;
-    //   const index = state.items.findIndex(
-    //     task => task.id === action.payload.id
-    //   );
-    //   state.items.splice(index, 1);
-    // },
-    // [deleteTask.rejected]: handleRejected,
-    // [toggleCompleted.pending]: handlePending,
-    // [toggleCompleted.fulfilled](state, action) {
-    //   state.isLoading = false;
-    //   state.error = null;
-    //   const index = state.items.findIndex(
-    //     task => task.id === action.payload.id
-    //   );
-    //   state.items.splice(index, 1, action.payload);
-    // },
-    // [toggleCompleted.rejected]: handleRejected,
+      state.items = [...action.payload];
+    });
+    builder.addCase(fetchShops.rejected, handleRejected);
   },
 });
+
+export const { setChosenShop } = shopsSlice.actions;
 
 export const shopsReducer = shopsSlice.reducer;

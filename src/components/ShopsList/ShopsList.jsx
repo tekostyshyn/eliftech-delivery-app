@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
-import { selectShops } from 'redux/selectors';
+import { selectShopsList } from 'redux/selectors';
 import { Container, Heading, List } from './ShopsList.styled';
 import ShopItem from 'components/ShopItem';
 
-const ShopsList = ({ onClick }) => {
-  const shopsList = useSelector(selectShops);
+const ShopsList = () => {
+  const shopsList = useSelector(selectShopsList);
 
   return (
     <Container>
@@ -12,7 +12,7 @@ const ShopsList = ({ onClick }) => {
       <List>
         {shopsList.map(shop => (
           <li key={shop.id}>
-            <ShopItem onClick={onClick} name={shop.name} />
+            <ShopItem name={shop.name} />
           </li>
         ))}
       </List>

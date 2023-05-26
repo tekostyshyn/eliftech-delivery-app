@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import { selectMeals } from 'redux/selectors';
 import MealItem from 'components/MealItem';
 
-const MealsList = ({ chosenShop }) => {
-  const mealsList = useSelector(selectMeals(chosenShop));
+const MealsList = () => {
+  const mealsList = useSelector(selectMeals);
   return (
     <Container>
       {mealsList.map(meal => (

@@ -18,12 +18,12 @@ const OrderForm = () => {
       dispatch(
         submitOrder({ userInfo: { name, phone, email, address }, order: meals })
       );
+      form.reset();
     }
-    form.reset();
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={(event) => {handleSubmit(event)}}>
       <Label htmlFor="name">Name:</Label>
       <Input type="text" id="name" name="name" required />
       <Label htmlFor="email">Email:</Label>
