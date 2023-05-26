@@ -3,7 +3,7 @@
 > Live demo [_here_](https://tekostyshyn.github.io/eliftech-delivery-app/).
 
 
-<!-- ![Screenshot of the App](./assets/food-delivery-app.png) -->
+![Screenshot of the App](./assets/food-delivery-app.png)
 
 
 ## Table of Contents
