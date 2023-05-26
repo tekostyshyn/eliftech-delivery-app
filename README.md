@@ -1,6 +1,8 @@
 # Delivery Food App 
 > This is a food delivery application created using React and Redux.
 > Live demo [_here_](https://tekostyshyn.github.io/eliftech-delivery-app/).
+
+
 ![Screenshot of the App](./assets/food-delivery-app.png)
 
 
