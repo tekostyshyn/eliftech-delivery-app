@@ -24,7 +24,7 @@ const Cart = () => {
             {isOrdered && (
               <Message>
                 You order has been submitted successfully. We will call you
-                within 15 minutes. Thank you for chosing us and have a nice day!
+                within 15 minutes. Thank you for choosing us and have a nice day!
               </Message>
             )}
             <CartList />
