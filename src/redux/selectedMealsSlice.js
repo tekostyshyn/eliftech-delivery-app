@@ -1,6 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { submitOrder } from './operations';
 
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
 const handlePending = state => {
   state.isLoading = true;
 };
@@ -59,6 +62,18 @@ const selectedMealsSlice = createSlice({
   },
 });
 
+const persistConfig = {
+  key: 'meals',
+  version: 1,
+  whitelist: ["meals"],
+  storage,
+};
+
+export const persistedselectedMealsReducer = persistReducer(
+  persistConfig,
+  selectedMealsSlice.reducer
+);
+
 export const {
   addMeal,
   increaseAmount,
@@ -66,4 +81,3 @@ export const {
   deleteMeal,
   setUserInfo,
 } = selectedMealsSlice.actions;
-export const selectedMealsReducer = selectedMealsSlice.reducer;
