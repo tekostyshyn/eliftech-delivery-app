@@ -22,13 +22,13 @@ acquainted and configure additional features
 [refer to documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 ## Functions
-User can choose a shop from the listed on the left.
-User can order meals from that shop by choosing different menu items, namely its quantity.
-User can add meal to the cart only after choosing necessary quantity (more than 0).
-If the user has chosen meal from one shop, the other shop will automatically become disabled.
-After user chooses all items on Shop page, the user can go to the Shopping cart page to place the order.
-All fields in the form are required. In order to send the order, all fields should be filled and there should be some items in the cart.
-After successful submission of the order, data is send to database and user will see a message that the order is successfully placed.
+1. User can choose a shop from the listed on the left.
+2. User can order meals from that shop by choosing different menu items, namely its quantity.
+3. User can add meal to the cart only after choosing necessary quantity (more than 0).
+4. If the user has chosen meal from one shop, the other shop will automatically become disabled.
+5. After user chooses all items on Shop page, the user can go to the Shopping cart page to place the order.
+6. All fields in the form are required. In order to send the order, all fields should be filled and there should be some items in the cart.
+7. After successful submission of the order, data is send to database and user will see a message that the order is successfully placed.
 
 ## Preparing for coding
 
