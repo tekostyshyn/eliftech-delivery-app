@@ -1,7 +1,9 @@
 import { useDispatch } from 'react-redux';
-import { ImCross } from "react-icons/im";
-
-import { increaseAmount, decreaseAmount, deleteMeal } from 'redux/selectedMealsSlice';
+import {
+  increaseAmount,
+  decreaseAmount,
+  deleteMeal,
+} from 'redux/selectedMealsSlice';
 import {
   Picture,
   Item,
@@ -10,6 +12,7 @@ import {
   AmountWrapper,
   DeleteButton,
 } from './CartItem.styled';
+import { ImCross } from 'react-icons/im';
 
 const CartItem = ({ name, url, price, amount, id }) => {
   const dispatch = useDispatch();
@@ -21,20 +24,31 @@ const CartItem = ({ name, url, price, amount, id }) => {
         <Heading>{name}</Heading>
         <Text>Price: {price} UAH</Text>
         <AmountWrapper>
-          <button onClick={() => {dispatch(decreaseAmount(name))}} type="button" >
-            - </button>
+          <button
+            onClick={() => {
+              dispatch(decreaseAmount(name));
+            }}
+            type="button"
+          >
+            -{' '}
+          </button>
           <Text>Amount: {amount}</Text>
           <button
             onClick={() => {
               dispatch(increaseAmount(name));
             }}
             type="button"
-          >+</button>
+          >
+            +
+          </button>
         </AmountWrapper>
-        <DeleteButton  onClick={() => {
-              dispatch(deleteMeal(id));
-            }} type="button">
-          <ImCross/>
+        <DeleteButton
+          onClick={() => {
+            dispatch(deleteMeal(id));
+          }}
+          type="button"
+        >
+          <ImCross />
         </DeleteButton>
       </div>
     </Item>

@@ -1,7 +1,7 @@
-import { Container } from './MealsList.styled';
 import { useSelector } from 'react-redux';
 import { selectMeals } from 'redux/selectors';
 import MealItem from 'components/MealItem';
+import { Container } from './MealsList.styled';
 
 const MealsList = () => {
   const mealsList = useSelector(selectMeals);

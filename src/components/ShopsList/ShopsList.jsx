@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { selectShopsList } from 'redux/selectors';
-import { Container, Heading, List } from './ShopsList.styled';
 import ShopItem from 'components/ShopItem';
+import { Container, Heading, List } from './ShopsList.styled';
 
 const ShopsList = () => {
   const shopsList = useSelector(selectShopsList);

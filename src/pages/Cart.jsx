@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
+import { selectOrderState, selectTotalPrice } from 'redux/selectors';
 import CartList from 'components/CartList';
 import OrderForm from 'components/OrderForm';
-import { selectOrderState, selectTotalPrice } from 'redux/selectors';
 import {
   PageLayout,
   Container,

@@ -1,7 +1,7 @@
-import { Label, Input, Button } from './OrderForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { submitOrder } from 'redux/operations';
 import { selectChosenMeals } from 'redux/selectors';
+import { Label, Input, Button } from './OrderForm.styled';
 
 const OrderForm = () => {
   const dispatch = useDispatch();
