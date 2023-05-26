@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addMeal } from 'redux/selectedMealsSlice';
+import { selectChosenShop } from 'redux/selectors';
 import {
   Container,
   Picture,
@@ -10,13 +11,14 @@ import {
   AmountWrapper,
 } from './MealItem.styled';
 
-const MealItem = ({ name, price, id, url}) => {
+const MealItem = ({ name, price, id, url }) => {
   const [amount, setAmount] = useState(0);
   const dispatch = useDispatch();
+  const selectedShop = useSelector(selectChosenShop);
 
-  const handleClick = (name) => {
+  const handleClick = name => {
     if (amount === 0) return;
-    dispatch(addMeal({ name, amount, price, id, url }));
+    dispatch(addMeal({ name, amount, price, id, url, shop: selectedShop }));
   };
 
   const handleIncrement = () => {
@@ -43,11 +45,21 @@ const MealItem = ({ name, price, id, url}) => {
         <Text>{price} UAH</Text>
       </Wrapper>
       <Wrapper>
-        <Button className={setButtonClasses()} onClick={() => handleClick(name)} type='button'>Add to Cart</Button>
+        <Button
+          className={setButtonClasses()}
+          onClick={() => handleClick(name)}
+          type="button"
+        >
+          Add to Cart
+        </Button>
         <AmountWrapper>
-          <button onClick={handleDecrement} type='button'>-</button>
+          <button onClick={handleDecrement} type="button">
+            -
+          </button>
           <p>Amount: {amount}</p>
-          <button onClick={handleIncrement} type='button'>+</button>
+          <button onClick={handleIncrement} type="button">
+            +
+          </button>
         </AmountWrapper>
       </Wrapper>
     </Container>
