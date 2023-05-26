@@ -15,6 +15,7 @@ const CartList = () => {
             price={meal.price}
             amount={meal.amount}
             url={meal.url}
+            id={meal.id}
           ></CartItem>
         ))}
     </List>

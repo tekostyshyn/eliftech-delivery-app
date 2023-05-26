@@ -43,11 +43,11 @@ const MealItem = ({ name, price, id, url}) => {
         <Text>{price} UAH</Text>
       </Wrapper>
       <Wrapper>
-        <Button className={setButtonClasses()} onClick={() => handleClick(name)}>Add to Cart</Button>
+        <Button className={setButtonClasses()} onClick={() => handleClick(name)} type='button'>Add to Cart</Button>
         <AmountWrapper>
-          <button onClick={handleDecrement}>-</button>
+          <button onClick={handleDecrement} type='button'>-</button>
           <p>Amount: {amount}</p>
-          <button onClick={handleIncrement}>+</button>
+          <button onClick={handleIncrement} type='button'>+</button>
         </AmountWrapper>
       </Wrapper>
     </Container>

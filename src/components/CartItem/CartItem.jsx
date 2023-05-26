@@ -1,8 +1,17 @@
 import { useDispatch } from 'react-redux';
-import { Picture, Item, Text, Heading, AmountWrapper } from './CartItem.styled';
-import { increaseAmount, decreaseAmount } from 'redux/selectedMealsSlice';
+import { ImCross } from "react-icons/im";
 
-const CartItem = ({ name, url, price, amount }) => {
+import { increaseAmount, decreaseAmount, deleteMeal } from 'redux/selectedMealsSlice';
+import {
+  Picture,
+  Item,
+  Text,
+  Heading,
+  AmountWrapper,
+  DeleteButton,
+} from './CartItem.styled';
+
+const CartItem = ({ name, url, price, amount, id }) => {
   const dispatch = useDispatch();
 
   return (
@@ -12,10 +21,21 @@ const CartItem = ({ name, url, price, amount }) => {
         <Heading>{name}</Heading>
         <Text>Price: {price} UAH</Text>
         <AmountWrapper>
-          <button onClick={() => {dispatch(decreaseAmount(name))}}>-</button>
+          <button onClick={() => {dispatch(decreaseAmount(name))}} type="button" >
+            - </button>
           <Text>Amount: {amount}</Text>
-          <button onClick={() => {dispatch(increaseAmount(name))}}>+</button>
+          <button
+            onClick={() => {
+              dispatch(increaseAmount(name));
+            }}
+            type="button"
+          >+</button>
         </AmountWrapper>
+        <DeleteButton  onClick={() => {
+              dispatch(deleteMeal(id));
+            }} type="button">
+          <ImCross/>
+        </DeleteButton>
       </div>
     </Item>
   );

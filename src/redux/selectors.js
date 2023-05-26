@@ -14,15 +14,18 @@ export const selectChosenShop = state => {
   return state.shops.chosenShop;
 };
 
-export const selectMeals = createSelector([selectAllShops, selectChosenShop], (shops, chosenShop) => {
-  return shops.reduce((allMeals, shop) => {
-    if (shop.name === chosenShop) {
-      allMeals.push(...shop.meals);
-    }
+export const selectMeals = createSelector(
+  [selectAllShops, selectChosenShop],
+  (shops, chosenShop) => {
+    return shops.reduce((allMeals, shop) => {
+      if (shop.name === chosenShop) {
+        allMeals.push(...shop.meals);
+      }
 
-    return allMeals;
-  }, []);
-});
+      return allMeals;
+    }, []);
+  }
+);
 
 export const selectChosenMeals = state => {
   return state.selectedMeals.meals;
@@ -30,4 +33,10 @@ export const selectChosenMeals = state => {
 
 export const selectOrderState = state => {
   return state.selectedMeals.isOrdered;
-}
+};
+
+export const selectTotalPrice = createSelector([selectChosenMeals], meals => {
+  return meals.reduce((totalPrice, meal) => {
+    return (totalPrice = totalPrice + Number(meal.amount) * Number(meal.price));
+  }, 0);
+});

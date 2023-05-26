@@ -1,4 +1,4 @@
-import { Label, Input } from './OrderForm.styled';
+import { Label, Input, Button } from './OrderForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { submitOrder } from 'redux/operations';
 import { selectChosenMeals } from 'redux/selectors';
@@ -22,6 +22,13 @@ const OrderForm = () => {
     }
   };
 
+  const setButtonClasses = () => {
+    if (meals.length <= 0) {
+      return 'disabled';
+    }
+    return '';
+  };
+
   return (
     <form onSubmit={(event) => {handleSubmit(event)}}>
       <Label htmlFor="name">Name:</Label>
@@ -32,7 +39,7 @@ const OrderForm = () => {
       <Input type="tel" id="phone" name="phone" required />
       <Label htmlFor="address">Address:</Label>
       <Input type="text" id="address" name="address" required />
-      <button type="submit">Submit order</button>
+      <Button className={setButtonClasses()} type="submit">Submit order</Button>
     </form>
   );
 };
