@@ -1,9 +1,32 @@
-# Instructions
+# Delivery Food App 
+> This is a food delivery application created using React and Redux.
+> Live demo [_here_](https://tekostyshyn.github.io/eliftech-delivery-app/).
+![Screenshot of the App](./assets/food-delivery-app.png)
 
+
+## Table of Contents
+* [General Info](#general-information)
+* [Functions](#functions)
+* [Preparing for coding](#features)
+* [Deploy](#deploy)
+* [Deployment status](#deployment-status)
+* [Live page](#live-page)
+* [Contact](#contact)
+
+## General Information
 This project was created with
 [Create React App](https://github.com/facebook/create-react-app). To get
 acquainted and configure additional features
 [refer to documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+## Functions
+User can choose a shop from the listed on the left.
+User can order meals from that shop by choosing different menu items, namely its quantity.
+User can add meal to the cart only after choosing necessary quantity (more than 0).
+If the user has chosen meal from one shop, the other shop will automatically become disabled.
+After user chooses all items on Shop page, the user can go to the Shopping cart page to place the order.
+All fields in the form are required. In order to send the order, all fields should be filled and there should be some items in the cart.
+After successful submission of the order, data is send to database and user will see a message that the order is successfully placed.
 
 ## Preparing for coding
 
@@ -31,9 +54,7 @@ Next, you need to go to the settings of the GitHub repository (`Settings` >
 `Pages`) and set the distribution of the production version of files from the
 `/root` folder of the `gh-pages` branch, if this was not done automatically.
 
-![GitHub Pages settings](./assets/repo-settings.png)
-
-### Deployment status
+## Deployment status
 
 The deployment status of the latest commit is displayed with an icon next to its
 ID.
@@ -45,42 +66,13 @@ ID.
 More detailed information about the status can be viewed by clicking on the
 icon, and in the drop-down window, follow the link `Details`.
 
-![Deployment status](./assets/deploy-status.png)
-
-### Live page
+## Live page
 
 After some time, usually a couple of minutes, the live page can be viewed at the
-address specified in the edited `homepage` property. For example, here is a link
-to a live version for this repository
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+address specified in the edited `homepage` property. 
 
 If a blank page opens, make sure there are no errors in the `Console` tab
 related to incorrect paths to the CSS and JS files of the project (**404**). You
 most likely have the wrong value for the `homepage` property in the
 `package.json` file.
 
-### Routing
-
-If your application uses the `react-router-dom` library for routing, you must
-additionally configure the `<BrowserRouter>` component by passing the exact name
-of your repository in the `basename` prop. Slashes at the beginning and end of
-the line are required.
-
-```jsx
-<BrowserRouter basename="/your_repo_name/">
-  <App />
-</BrowserRouter>
-```
-
-## How it works
-
-![How it works](./assets/how-it-works.png)
-
-1. After each push to the `main` branch of the GitHub repository, a special
-   script (GitHub Action) is launched from the `.github/workflows/deploy.yml`
-   file.
-2. All repository files are copied to the server, where the project is
-   initialized and linted and built before deployment.
-3. If all steps are successful, the built production version of the project
-   files is sent to the `gh-pages` branch. Otherwise, the script execution log
-   will indicate what the problem is.
