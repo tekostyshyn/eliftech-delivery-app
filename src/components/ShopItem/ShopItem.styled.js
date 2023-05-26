@@ -9,7 +9,7 @@ export const Button = styled.button`
     border-radius: 4px;
     border: 3px solid white;
 
-    &:hover, &:focus {
+    &:hover, &:focus, &.active {
         border-color: #0047AB;  
         color: #0047AB; 
     }
