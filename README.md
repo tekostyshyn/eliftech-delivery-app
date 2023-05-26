@@ -78,3 +78,5 @@ related to incorrect paths to the CSS and JS files of the project (**404**). You
 most likely have the wrong value for the `homepage` property in the
 `package.json` file.
 
+## Contact
+Created by [@tekostyshyn](https://t.me/tetekost) - feel free to contact me!
